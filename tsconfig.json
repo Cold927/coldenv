@@ -21,5 +21,4 @@
     "esModuleInterop": true,
     "moduleResolution": "Node"
   },
-  "include": ["dist"]
 }

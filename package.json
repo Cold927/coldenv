@@ -12,7 +12,12 @@
     "coldenv": "dist/cli.js"
   },
   "scripts": {
-    "playground": "npx nestjs-command playground"
+    "playground": "npx nestjs-command playground",
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "execute": "sed -i '1i#!/usr/bin/env node' dist/cli.js",
+    "links": "chmod +x dist/cli.js && sudo npm link",
+    "prod": "yarn build && yarn links"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
