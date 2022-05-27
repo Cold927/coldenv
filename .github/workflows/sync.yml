@@ -1,0 +1,22 @@
+name: PushGitlab
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with: 
+        fetch-depth: 0
+      env: 
+        token: ${{ secrets.GITLAB_ACCESS_TOKEN }}
+
+    - name: Push To Gitlab
+      run: |
+        echo Starting to push repo to gitlab
+        git remote set-url origin "https://oauth2:${token}@gitlab.cleverton.ru/Cold/coldenv.git"
+        git push origin master
