@@ -18,5 +18,5 @@ jobs:
     - name: Push To Gitlab
       run: |
         echo Starting to push repo to gitlab
-        git remote set-url origin "https://oauth2:${token}@gitlab.cleverton.ru/Cold/coldenv.git"
+        git remote set-url origin "https://Cold:${token}@gitlab.cleverton.ru/Cold/coldenv.git"
         git push origin master
