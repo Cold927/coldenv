@@ -1,9 +1,9 @@
 {
   "name": "coldenv",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "author": "Roman Cold",
-  "license": "",
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
@@ -15,7 +15,6 @@
     "playground": "npx nestjs-command playground",
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "execute": "sed -i '1i#!/usr/bin/env node' dist/cli.js",
     "links": "chmod +x dist/cli.js && sudo npm link",
     "prod": "yarn build && yarn links"
   },
