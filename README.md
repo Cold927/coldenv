@@ -6,7 +6,6 @@ Utility to encrypt and decrypt JSON file for .env assembly
 ```bash
 $ yarn add https://github.com/Cold927/coldenv
 ```
-or
 
 ## How to use
 
