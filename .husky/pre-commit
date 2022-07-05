@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm --no-git-tag-version version patch && git add package.json && git add --chmod=+x -- bin/cli.js
+npm --no-git-tag-version version patch && git add package.json && git --chmod=+x -- bin/cli.js && chmod a+x bin/cli.js
 
