@@ -7,14 +7,15 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/cli.js",
   "bin": {
-    "coldenv": "dist/cli.js"
+    "coldenv": "bin/cli.js"
   },
   "scripts": {
     "playground": "npx nestjs-command playground",
     "prebuild": "rimraf dist",
     "build": "nest build",
+    "start": "node dist/cli.js",
+    "dev": "nest start",
     "links": "chmod +x dist/cli.js && sudo npm link",
     "prod": "yarn build && yarn links"
   },
