@@ -1,6 +1,6 @@
 {
   "name": "coldenv",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "author": "Roman Cold",
   "license": "MIT",
@@ -16,7 +16,7 @@
     "build": "nest build",
     "start": "node dist/cli.js",
     "dev": "nest start",
-    "links": "chmod +x dist/cli.js && sudo npm link",
+    "links": "chmod +x bin/cli.js && sudo npm link",
     "prod": "yarn build && yarn links"
   },
   "dependencies": {
