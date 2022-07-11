@@ -27,8 +27,8 @@ exports.main = void 0;
 const fs = __importStar(require("fs"));
 const CryptoJS = __importStar(require("crypto-js"));
 const main = async (moduleRef, args) => {
-    const privateKey = fs.readFileSync(process.cwd() + '/private.key', 'utf-8');
-    const token = fs.readFileSync(process.cwd() + '/secret.txt', 'utf-8');
+    const privateKey = fs.readFileSync(process.cwd() + '/private.key');
+    const token = fs.readFileSync(process.cwd() + '/secret.txt');
     let bytes = CryptoJS.AES.decrypt(token, privateKey);
     let decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
     fs.writeFileSync('development.json', decryptedData);
